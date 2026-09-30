@@ -1,11 +1,11 @@
-# code-galaxy
+# code-galaxy-tree
 
 **Your Git history, grown into a living 3D tree.**
 
 ![The history of react-three-fiber as a 3D tree, one leaf per commit, colored by author](https://raw.githubusercontent.com/Ardo701/code-galaxy/main/docs/images/tree.jpg)
 
 ```bash
-npx code-galaxy
+npx code-galaxy-tree
 ```
 
 Run it in a Git repository and the tree opens in your browser. The main branch is the trunk, Git branches grow from the
@@ -25,8 +25,8 @@ Everything runs on your machine: the viewer is served on `localhost` only, and n
 ## Usage
 
 ```text
-code-galaxy [path]                   Open the tree of the repository at path (default: this folder, or the picker)
-code-galaxy export [path] [-o file]  Save the history as a .galaxy.json file
+code-galaxy-tree [path]                   Open the tree of the repository at path (default: this folder, or the picker)
+code-galaxy-tree export [path] [-o file]  Save the history as a .galaxy.json file
 
 -p, --port <number>    Port of the local server (default: 3141)
 -t, --trunk <branch>   Branch drawn as the trunk (default: the main branch)

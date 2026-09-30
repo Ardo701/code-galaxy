@@ -18,9 +18,9 @@ ${styleText('bold', 'Code Galaxy')} ${styleText('dim', `v${version}`)}
 Grow your Git history into an interactive 3D tree.
 
 ${styleText('bold', 'Usage')}
-  code-galaxy [path]                 Open the tree of the repository at path
-                                     (default: this folder, or a repository picker)
-  code-galaxy export [path] [-o file] Save the history as a .galaxy.json file
+  code-galaxy-tree [path]                  Open the tree of the repository at path
+                                           (default: this folder, or a repository picker)
+  code-galaxy-tree export [path] [-o file] Save the history as a .galaxy.json file
 
 ${styleText('bold', 'Options')}
   -p, --port <number>    Port of the local server (default: 3141)

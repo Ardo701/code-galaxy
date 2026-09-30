@@ -255,7 +255,7 @@ export function App() {
               changed. Explore years of work in 3D, right in your browser.
             </p>
             <div className="hero-actions">
-              <CopyCommand command="npx code-galaxy" />
+              <CopyCommand command="npx code-galaxy-tree" />
               <button type="button" className="explore-button" onClick={() => setExploring(true)} disabled={!data}>
                 <Maximize2 size={15} /> Explore in 3D
               </button>
@@ -323,10 +323,10 @@ export function App() {
             You need Node.js 20 or newer and Git. Nothing to install globally.
           </SectionHead>
           <div className="start-grid">
-            <pre className="terminal" aria-label="Terminal running npx code-galaxy">
+            <pre className="terminal" aria-label="Terminal running npx code-galaxy-tree">
               <span className="t-dim">~/projects/my-app</span>
               {'\n'}
-              <span className="t-dim">$</span> npx code-galaxy{'\n\n'}
+              <span className="t-dim">$</span> npx code-galaxy-tree{'\n\n'}
               {'  '}
               <b>Code Galaxy</b> <span className="t-dim">v0.1.0</span>
               {'\n\n'}
@@ -344,16 +344,16 @@ export function App() {
             <div className="start-commands">
               <div className="start-command">
                 <h3>Open the repository you are in</h3>
-                <CopyCommand command="npx code-galaxy" compact />
+                <CopyCommand command="npx code-galaxy-tree" compact />
                 <p>Anywhere else, it opens a picker: your repositories, a folder browser, or an address to clone.</p>
               </div>
               <div className="start-command">
                 <h3>Open another folder</h3>
-                <CopyCommand command="npx code-galaxy ../another-repo" compact />
+                <CopyCommand command="npx code-galaxy-tree ../another-repo" compact />
               </div>
               <div className="start-command">
                 <h3>Choose the branch drawn as the trunk</h3>
-                <CopyCommand command="npx code-galaxy --trunk develop" compact />
+                <CopyCommand command="npx code-galaxy-tree --trunk develop" compact />
               </div>
             </div>
           </div>

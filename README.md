@@ -3,7 +3,7 @@
   <h1>Code Galaxy</h1>
   <p><strong>Your Git history, grown into a living 3D tree.</strong></p>
   <p>
-    <a href="https://www.npmjs.com/package/code-galaxy"><img src="https://img.shields.io/npm/v/code-galaxy?color=333&label=npm" alt="npm version" /></a>
+    <a href="https://www.npmjs.com/package/code-galaxy-tree"><img src="https://img.shields.io/npm/v/code-galaxy-tree?color=333&label=npm" alt="npm version" /></a>
     <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-333" alt="MIT license" /></a>
     <img src="https://img.shields.io/badge/node-%E2%89%A5%2020.19-333" alt="Node.js 20.19 or newer" />
   </p>
@@ -18,7 +18,7 @@ colored by its author and sized by the lines it changed. Replay years of work in
 commit, and watch new leaves appear as you work.
 
 ```bash
-npx code-galaxy
+npx code-galaxy-tree
 ```
 
 Run it in a Git repository and the tree opens in your browser. Nothing to install, no account, and nothing leaves
@@ -69,9 +69,9 @@ your computer.
 
 ## Opening any repository
 
-- **The repository you are in**: `npx code-galaxy`.
-- **Another folder**: `npx code-galaxy ../another-repo`.
-- **Anything else**: run `npx code-galaxy` outside a repository and a picker opens in the browser. It lists the
+- **The repository you are in**: `npx code-galaxy-tree`.
+- **Another folder**: `npx code-galaxy-tree ../another-repo`.
+- **Anything else**: run `npx code-galaxy-tree` outside a repository and a picker opens in the browser. It lists the
   repositories found on your computer and the ones you opened recently, has a folder browser, and a field where you can
   paste the address of a public repository: `github.com/owner/repo`, `owner/repo`, a GitLab, Bitbucket or Codeberg
   URL, an SSH address, or even a link to one of its pages.
@@ -87,8 +87,8 @@ clone them.
 ## Command line
 
 ```text
-code-galaxy [path]                   Open the tree of the repository at path (default: this folder, or the picker)
-code-galaxy export [path] [-o file]  Save the history as a .galaxy.json file
+code-galaxy-tree [path]                   Open the tree of the repository at path (default: this folder, or the picker)
+code-galaxy-tree export [path] [-o file]  Save the history as a .galaxy.json file
 
 -p, --port <number>    Port of the local server (default: 3141)
 -t, --trunk <branch>   Branch drawn as the trunk (default: the main branch)
@@ -129,7 +129,7 @@ This is an npm workspaces monorepo:
 
 ```text
 packages/viewer   The 3D scene and its interface, shared by the command and the website.
-packages/cli      The `code-galaxy` command published on npm: reads Git, serves the viewer on localhost.
+packages/cli      The `code-galaxy-tree` command published on npm: reads Git, serves the viewer on localhost.
 apps/site         The website, deployed on Vercel: presentation and live demos.
 scripts           Maintenance scripts (website demos, tricky test histories).
 ```
@@ -162,7 +162,7 @@ Only `packages/cli` is published; its build embeds the compiled viewer.
 
 ```bash
 npm run build:cli
-npm publish -w code-galaxy
+npm publish -w code-galaxy-tree
 ```
 
 Pushing a `v*` tag runs the release workflow, which publishes the package from GitHub Actions (it needs an `NPM_TOKEN`

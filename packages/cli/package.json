@@ -1,5 +1,5 @@
 {
-  "name": "code-galaxy",
+  "name": "code-galaxy-tree",
   "version": "0.1.0",
   "description": "Grow your Git history into an interactive 3D tree, right in your browser.",
   "keywords": [
@@ -20,7 +20,7 @@
   "license": "MIT",
   "type": "module",
   "bin": {
-    "code-galaxy": "dist/cli.js"
+    "code-galaxy-tree": "dist/cli.js"
   },
   "files": [
     "dist"

@@ -7,10 +7,10 @@
     "apps/*"
   ],
   "scripts": {
-    "dev": "npm run dev -w code-galaxy --",
+    "dev": "npm run dev -w code-galaxy-tree --",
     "dev:site": "npm run dev -w @code-galaxy/site --",
-    "build": "npm run build -w code-galaxy && npm run build -w @code-galaxy/site",
-    "build:cli": "npm run build -w code-galaxy",
+    "build": "npm run build -w code-galaxy-tree && npm run build -w @code-galaxy/site",
+    "build:cli": "npm run build -w code-galaxy-tree",
     "build:site": "npm run build -w @code-galaxy/site",
     "demos": "node scripts/build-demos.mjs",
     "typecheck": "npm run typecheck --workspaces --if-present",
