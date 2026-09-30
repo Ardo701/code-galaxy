@@ -1,0 +1,48 @@
+{
+  "name": "code-galaxy",
+  "version": "0.1.0",
+  "description": "Grow your Git history into an interactive 3D tree, right in your browser.",
+  "keywords": [
+    "git",
+    "visualization",
+    "3d",
+    "history",
+    "cli",
+    "three.js"
+  ],
+  "homepage": "https://github.com/Ardo701/code-galaxy#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ardo701/code-galaxy.git",
+    "directory": "packages/cli"
+  },
+  "bugs": "https://github.com/Ardo701/code-galaxy/issues",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "code-galaxy": "dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=20.19"
+  },
+  "scripts": {
+    "dev": "vite --config web/vite.config.ts",
+    "build": "vite build --config web/vite.config.ts && tsc -p tsconfig.build.json",
+    "start": "node dist/cli.js",
+    "typecheck": "tsc -p tsconfig.json --noEmit && tsc -p web/tsconfig.json --noEmit"
+  },
+  "devDependencies": {
+    "@code-galaxy/viewer": "0.1.0",
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.1",
+    "lucide-react": "^1.49.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "vite": "^8.3.1"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "code-galaxy-monorepo",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w code-galaxy --",
+    "dev:site": "npm run dev -w @code-galaxy/site --",
+    "build": "npm run build -w code-galaxy && npm run build -w @code-galaxy/site",
+    "build:cli": "npm run build -w code-galaxy",
+    "build:site": "npm run build -w @code-galaxy/site",
+    "demos": "node scripts/build-demos.mjs",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "edge-cases": "bash scripts/build-edge-cases.sh"
+  },
+  "engines": {
+    "node": ">=20.19"
+  },
+  "devDependencies": {
+    "prettier": "^3.9.9",
+    "typescript": "^7.0.2"
+  },
+  "overrides": {
+    "source-map-js": "1.2.1"
+  }
+}
